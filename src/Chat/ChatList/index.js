@@ -8,8 +8,8 @@ const defaultConversation = "4a37fe43-c74a-4fa7-9b6c-376b92f00db5"
 const ChatListComponent = ({ messages }) => {
   return (
     <div className="ChatList">
-      {messages.map(message => (
-        <div key={message.id}>{message.content}</div>
+      {messages.map(({ id, content }) => (
+        <div key={id}>{content}</div>
       ))}
     </div>
   )
